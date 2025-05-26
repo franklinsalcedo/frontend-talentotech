@@ -1,35 +1,137 @@
 :root {
   --main-color: #fd9ed3;
+  --secondary-color: #62d2d5;
   --background-color: #F7F7F7;
+  --link-inverted-color: #FFFFFF;
 }
 body {
   background: var(--background-color);
   font-family: "Roboto", sans-serif;
+  font-size: 16px;
   margin: 0;
   padding: 0;
-}
-.img-fluid {
-  width: 100%;
-}
-header {
-  color: #FFF;
-  background: var(--main-color);
-  padding: 10px;
-  display: flex;
-  flex-direction: row;
-}
-.logo {
-  max-width: 200px;
-}
-nav ul {
-  list-style: none;
-  display: flex;
 }
 .container {
   max-width: 1700px;
   margin: 0 auto;
 }
-footer {
-  color: #FFF;
+.col-half {
+  padding: 15px;
+}
+.img-fluid {
+  max-width: 100%;
+}
+.btn {
   background: var(--main-color);
+  color: var(--background-color);
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+}
+input,
+textarea {
+  width: 100%;
+  border: none;
+  margin: 5px 0;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+textarea {
+  height: 100px;
+}
+header {
+  color: var(--link-inverted-color);
+  background: var(--main-color);
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  max-width: 180px;
+}
+nav.main-menu {
+  text-transform: uppercase;
+  display: none;
+}
+nav.main-menu a {
+  color: var(--link-inverted-color);
+  text-decoration: none;
+}
+nav.main-menu a:hover {
+  text-decoration: underline;
+}
+nav.main-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+nav.main-menu ul li {
+  padding: 0 10px;
+}
+.menu-mobile {
+  width: 20px;
+  padding: 10px;
+  display: flex;
+}
+.menu-mobile svg {
+  color: var(--link-inverted-color);
+  cursor: pointer;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#contacto {
+  background: var(--secondary-color);
+  padding: 30px;
+}
+.wrap-form {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+#contact_form label,
+#contact_form input,
+#contact_form textarea {
+  display: block;
+}
+
+#contact_form label {
+  margin-bottom: 10px;
+}
+
+footer {
+  color: var(--link-inverted-color);
+  background: var(--main-color);
+  text-align: center;
+  padding: 10px;
+}
+
+@media screen and (min-width: 991px) {
+  .container {
+    display: flex;
+    gap: 20px;
+  }
+  .col-half {
+    width: 50%;
+  }
+  nav.main-menu {
+    display: flex;
+  }
+  nav.main-menu ul {
+    flex-direction: row;
+  }
+
+  .menu-mobile {
+    display: none;
+  }
+  footer  {
+    text-align: right;
+  }
 }

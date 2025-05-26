@@ -12,9 +12,9 @@
 <body>
   <header>
     <div class="logo">
-      <img src="images/logo.png" class="img-fluid">
+      <img src="images/logo.png" class="img-fluid" alt="Bunnie Cakes">
     </div>
-    <nav>
+    <nav class="main-menu">
       <ul>
         <li><a href="#">Inicio</a></li>
         <li><a href="#">Nosotros</a></li>
@@ -22,19 +22,44 @@
         <li><a href="#">Contacto</a></li>
       </ul>
     </nav>
+    <div class="menu-mobile">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="#FFF"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+    </div>
   </header>
   <main>
     <div id="somos" class="container">
-      <video controls src="images/bunnie-cakes.mp4" width="600" height="400">
-        <source src="images/bunnie-cakes.mp4" type="video/mp4">
-        Tu navegador no soporta la reproducción de video.
+      <div class="col-half intro">
+        <h1>¿Listo para hornear?</h1>
+        <p>Pide el trío perfecto de Bunnie Cakes, con nuestras chispas de corazón características, y te lo entregamos en casa, recién hecho y listo para hornear.</p>
+      </div>
+      <div class="col-half">
+        <video controls src="images/bunnie-cakes.mp4" width="600" class="img-fluid">
+          <source src="images/bunnie-cakes.mp4" type="video/mp4">
+          Tu navegador no soporta la reproducción de video.
       </video>
-    </div>
-    <div id="productos">
-      Productos
+      </div>
     </div>
     <div id="contacto">
-      Formulario de contacto
+      <div class="container">
+        <div class="wrap-form">
+          <form action="https://formspree.io/f/mdkgrllb" method="POST" id="contact_form">
+            <label>
+              Nombre: *
+              <input type="text" name="nombre" required>
+            </label>
+            <label>
+              Email: *
+              <input type="email" name="email" required>
+            </label>
+            <label>
+              Mensaje: *
+              <textarea name="mensaje" required></textarea>
+            </label>
+            <button type="submit" class="btn">Send</button>
+          </form>
+        </div>
+      </div>
     </div>
   </main>
   <footer>
